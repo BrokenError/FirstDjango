@@ -10,4 +10,7 @@ class Women(models.Model):
 
 # можно почитать за поля и что они делают djbook.ru/rel3.0/ref/models/fields.html#charfield
 
+    def __str__(self):
+        return self.title
+
 # Create your models here.
