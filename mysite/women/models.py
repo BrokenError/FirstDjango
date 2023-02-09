@@ -20,6 +20,12 @@ class Women(models.Model):
         return reverse('post', kwargs={'post_id': self.pk})
 
 
+    class Meta:
+        verbose_name = 'Известные женщины'
+        verbose_name_plural = 'Известные женщины'
+        ordering = ['time_create', 'title']
+
+
 class Category(models.Model):
     name= models.CharField(max_length=100, db_index=True)
 
