@@ -9,7 +9,7 @@ class Women(models.Model):
     time_create = models.DateTimeField(auto_now_add=True, verbose_name="Время создания")
     time_update = models.DateTimeField(auto_now=True, verbose_name="Время изменения")
     is_published = models.BooleanField(default=True, verbose_name="Публикация")
-    cat = models.ForeignKey('Category', on_delete=models.PROTECT, verbose_name="Категории")
+    cat = models.ForeignKey('Category', on_delete=models.PROTECT, verbose_name="Категории", related_name='get_posts')
 
 # можно почитать за поля и что они делают djbook.ru/rel3.0/ref/models/fields.html#charfield
 
