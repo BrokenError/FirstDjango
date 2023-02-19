@@ -23,3 +23,9 @@ class AddPostForm(forms.ModelForm):
             raise ValidationError('Длина превышает 200 символов')
 
         return title
+
+    
+class RefisterUserForm(UserCreationForm):
+    class Meta:
+        model = User
+        fields = ('username', 'p')
