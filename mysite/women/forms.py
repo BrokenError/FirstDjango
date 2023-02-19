@@ -2,7 +2,7 @@ from django import forms
 from django.core.exceptions import ValidationError
 from .models import *
 
-class AppPostForm(forms.ModelForm):
+class AddPostForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['cat'].empty_label = "Категория не выбрана"
